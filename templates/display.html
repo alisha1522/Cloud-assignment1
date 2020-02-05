@@ -18,7 +18,7 @@
 	        </tr>
 	        <tr>
 	            <td><b>Uploaded FileName:</b></td>
-	            <td>((filename}}</td>
+	            <td>{{filename}}</td>
 	        </tr>
 	        <tr>
 	            <td><b>Upload Files Word Count:</b></td>
@@ -26,7 +26,7 @@
             </tr>
             <tr>
                 <td><b>File to Download </b></td>
-	            <td><a href="" target="_blank">Download file</a> </td></tr>
+	            <td><a href="{{url_for('download',filename=filename)}}" target="_blank">Download file</a> </td></tr>
 	</table>
 	</fieldset>
 	
@@ -36,6 +36,7 @@
     <br>Select File to upload:
     <input type="file" name="file">
     <input type="hidden" name="username" value="{{username}}">
+    <input type="hidden" name="password" value="{{password}}">
     <input type="submit" value="Upload File" name= "file">
 	
 </form>
