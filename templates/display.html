@@ -1,0 +1,44 @@
+<!doctype html>  
+<html lang="en">
+<body>
+<fieldset>
+	<legend><b>User Information:-</b></legend>
+	    <table border="1">
+	        <tr>
+                <td><b>First name:</b></td>
+                <td>{{firstname}}</td>
+	        </tr>
+            <tr>
+	            <td><b>Last name: </b></td>
+	            <td>{{lastname}}</td>
+	        </tr>
+	        <tr>
+	            <td><b>Email ID:</b></td>
+	            <td>{{email}}</td>
+	        </tr>
+	        <tr>
+	            <td><b>Uploaded FileName:</b></td>
+	            <td>((filename}}</td>
+	        </tr>
+	        <tr>
+	            <td><b>Upload Files Word Count:</b></td>
+	            <td>{{count}}</td>
+            </tr>
+            <tr>
+                <td><b>File to Download </b></td>
+	            <td><a href="" target="_blank">Download file</a> </td></tr>
+	</table>
+	</fieldset>
+	
+	<fieldset>
+<form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+ <b>Note: Please upload the file and then revisit this link to view the details.<br></b>
+    <br>Select File to upload:
+    <input type="file" name="file">
+    <input type="hidden" name="username" value="{{username}}">
+    <input type="submit" value="Upload File" name= "file">
+	
+</form>
+</fieldset>
+	</body>
+	</html> 

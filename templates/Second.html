@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Website </title>
+<link href ="../static/stylesheet.css" rel="stylesheet" type="text/css">
+<style>
+body  {
+  background-image: url("../static/123.png");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+   background-size: cover;
+}
+</style>
+</head>
+
+<body>
+<header>
+<form action="{{ url_for('register') }}" method = "POST">
+<label for="firstname"> First Name: </label>
+<input type="text" id="firstname" name= "firstname"><br><br>
+<label for="lastname"> Last Name: </label>
+<input type="text" id="lastname" name="lastname"><br><br>
+<label for="email"> E-mail: </label>
+<input type="text" id="email" name="email"><br><br>
+<label for="username"> User Name: </label>
+<input type="text" id="username" name="username"><br><br>
+<label for="pwd"> Password: </label>
+<input type="text" id="pwd" name="pwd"><br><br>
+<button type="submit">Save</button>
+				
+</form>
+</header>
+</body>
+</html>
